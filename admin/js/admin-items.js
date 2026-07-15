@@ -28,7 +28,27 @@ function options() {
       .join("")
   );
 }
-function open(i=null){editing=i;$("itemModalTitle").textContent=i?"Edit Food Item":"Add Food Item";$("itemForm").reset();$("itemCategory").innerHTML=options();if(i){$("itemName").value=i.itemName||"";$("itemCost").value=i.cost??"";$("itemQuantity").value=i.quantity??"";$("itemCategory").value=i.category?.categoryId??""}$("itemModal").classList.remove("hidden")}
+function open(i = null) {
+  editing = i;
+
+  $("itemModalTitle").textContent = i ? "Edit Food Item" : "Add Food Item";
+
+  $("itemForm").reset();
+
+  $("itemCategory").innerHTML = options();
+
+  if (i) {
+    $("itemName").value = i.itemName || "";
+
+    $("itemCost").value = i.cost ?? "";
+
+    $("itemQuantity").value = i.quantity ?? 0;
+
+    $("itemCategory").value = i.category?.categoryId ?? "";
+  }
+
+  $("itemModal").classList.remove("hidden");
+}
 function close(){$("itemModal").classList.add("hidden");editing=null}
 function payload() {
   const categoryId = Number($("itemCategory").value);
@@ -46,14 +66,18 @@ function payload() {
       itemId: editing.itemId,
       catergoryId: selectedCategory.categoryId,
       itemName: $("itemName").value.trim(),
+      quantity: Number($("itemQuantity").value),
       cost: Number($("itemCost").value),
-      quantity: Number(editing.quantity ?? 0),
     };
   }
 
   return {
     itemName: $("itemName").value.trim(),
+
     catergoryName: selectedCategory.categoryName,
+
+    quantity: Number($("itemQuantity").value),
+
     cost: Number($("itemCost").value),
   };
 }
