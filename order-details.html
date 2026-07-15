@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Foodie | Order Details</title><link rel="stylesheet" href="css/style.css"></head>
+<body>
+<header class="site-header"><nav class="navbar container"><a class="brand" href="restaurants.html">Foodie</a><div class="nav-links"><a href="order-history.html">← My Orders</a><button class="nav-button" id="logoutButton">Logout</button></div></nav></header>
+<main>
+<section class="page-hero"><div class="container"><p class="eyebrow">Order details</p><h1>Your Order</h1><p>Full bill and item breakdown.</p></div></section>
+<section class="section container">
+<div class="message hidden" id="detailsMessage"></div>
+<div class="loading-state" id="detailsLoading"><div class="spinner"></div><p>Loading order details...</p></div>
+<div class="order-detail-layout hidden" id="detailsLayout">
+<section class="checkout-card"><h2>Ordered items</h2><div id="detailItems"></div></section>
+<aside class="cart-summary">
+<p class="eyebrow">Bill summary</p>
+<div class="summary-row"><span>Status</span><strong id="detailStatus">—</strong></div>
+<div class="summary-row"><span>Order date</span><strong id="detailOrderDate">—</strong></div>
+<div class="summary-row"><span>Bill date</span><strong id="detailBillDate">—</strong></div>
+<div class="summary-row"><span>Total items</span><strong id="detailCount">—</strong></div>
+<div class="summary-row summary-total"><span>Total</span><strong id="detailTotal">—</strong></div>
+<a class="btn btn-secondary btn-block" href="order-history.html">Back to Orders</a>
+</aside></div>
+</section></main>
+<script src="js/api.js"></script><script src="js/order-details.js"></script>
+</body></html>

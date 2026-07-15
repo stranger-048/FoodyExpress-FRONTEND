@@ -1,0 +1,1 @@
+(async()=>{try{const restaurants=await API.getAllRestaurants();document.getElementById("restaurantStat").textContent=Array.isArray(restaurants)?restaurants.length:0}catch(e){const m=document.getElementById("dashboardMessage");m.textContent=e.message||"Unable to load dashboard.";m.className="message error"}})();

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Foodie | Food Menu</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <nav class="navbar container">
+    <a class="brand" href="restaurants.html">Foodie</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Open navigation">☰</button>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="restaurants.html">Restaurants</a>
+      <a class="active" href="menu.html">Food</a>
+      <a href="cart.html" class="cart-nav-link">Cart <span class="cart-badge hidden" id="cartBadge">0</span></a>
+      <a href="order-history.html">My Orders</a>
+      <button class="nav-button" id="logoutButton" type="button">Logout</button>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Pick something delicious</p>
+      <h1>Food Menu</h1>
+      <p id="menuContext">Browse all available food items and add them directly to your cart.</p>
+    </div>
+  </section>
+
+  <section class="section container">
+    <div class="menu-toolbar">
+      <div class="search-box">
+        <label class="sr-only" for="itemSearch">Search food</label>
+        <input id="itemSearch" type="search" placeholder="Search food by name...">
+      </div>
+      <select id="categoryFilter" aria-label="Filter by category">
+        <option value="">All Categories</option>
+      </select>
+    </div>
+
+    <div class="message hidden" id="menuMessage" role="alert"></div>
+
+    <div class="loading-state" id="menuLoading">
+      <div class="spinner"></div>
+      <p>Loading food items...</p>
+    </div>
+
+    <div class="empty-state hidden" id="menuEmpty">
+      <h2>No food items found</h2>
+      <p>Try another search or category.</p>
+    </div>
+
+    <div class="food-grid" id="itemContainer"></div>
+  </section>
+</main>
+
+<div class="toast hidden" id="cartToast" role="status"></div>
+
+<footer class="footer"><div class="container">Foodie — Online Food Ordering</div></footer>
+<script src="js/api.js"></script>
+<script src="js/menu.js"></script>
+</body>
+</html>

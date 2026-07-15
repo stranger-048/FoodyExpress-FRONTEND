@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Foodie | Register</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="auth-page">
+  <header class="site-header">
+    <nav class="navbar container">
+      <a class="brand" href="index.html">Foodie</a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="login.html">Login</a>
+        <a class="btn btn-small active-button" href="register.html">Register</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="auth-main">
+    <section class="auth-card auth-card-wide">
+      <p class="eyebrow">Join Foodie</p>
+      <h1>Create Customer Account</h1>
+      <p class="muted">Fill in your details. Account identifiers are handled automatically.</p>
+
+      <div class="message hidden" id="registerMessage" role="alert"></div>
+
+      <form id="registerForm" novalidate>
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" name="firstName" autocomplete="given-name" required>
+            <small class="field-error" id="firstNameError"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" name="lastName" autocomplete="family-name" required>
+            <small class="field-error" id="lastNameError"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="age">Age</label>
+            <input type="number" id="age" name="age" min="1" max="120" required>
+            <small class="field-error" id="ageError"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="gender">Gender</label>
+            <select id="gender" name="gender" required>
+              <option value="">Select Gender</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+              <option value="Other">Other</option>
+            </select>
+            <small class="field-error" id="genderError"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="mobileNumber">Mobile Number</label>
+            <input type="tel" id="mobileNumber" name="mobileNumber" inputmode="numeric" maxlength="10" autocomplete="tel" required>
+            <small class="field-error" id="mobileNumberError"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" autocomplete="email" required>
+            <small class="field-error" id="emailError"></small>
+          </div>
+
+          <div class="form-group form-group-full">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" autocomplete="new-password" required>
+            <small class="field-error" id="passwordError"></small>
+          </div>
+        </div>
+
+        <button class="btn btn-block" id="registerButton" type="submit">Register</button>
+      </form>
+
+      <p class="auth-switch">Already have an account? <a href="login.html">Login</a></p>
+    </section>
+  </main>
+
+  <script src="js/api.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

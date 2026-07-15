@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Foodie | My Orders</title><link rel="stylesheet" href="css/style.css"></head>
+<body>
+<header class="site-header"><nav class="navbar container">
+<a class="brand" href="restaurants.html">Foodie</a><button class="nav-toggle" id="navToggle">☰</button>
+<div class="nav-links" id="navLinks"><a href="restaurants.html">Restaurants</a><a href="menu.html">Food</a><a href="cart.html">Cart</a><a class="active" href="order-history.html">My Orders</a><button class="nav-button" id="logoutButton">Logout</button></div>
+</nav></header>
+<main>
+<section class="page-hero"><div class="container"><p class="eyebrow">Your food journey</p><h1>My Orders</h1><p>View previous orders, bills, status, and ordered food.</p></div></section>
+<section class="section container">
+<div class="message hidden" id="historyMessage"></div>
+<div class="loading-state" id="historyLoading"><div class="spinner"></div><p>Loading your orders...</p></div>
+<div class="empty-state hidden" id="historyEmpty"><h2>No orders yet</h2><p>Your completed orders will appear here.</p><a class="btn" href="restaurants.html">Order Food</a></div>
+<div class="order-history-grid" id="historyContainer"></div>
+</section></main>
+<footer class="footer"><div class="container">Foodie — Online Food Ordering</div></footer>
+<script src="js/api.js"></script><script src="js/order-history.js"></script>
+</body></html>

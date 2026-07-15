@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Foodie | Restaurants</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar container">
+      <a class="brand" href="restaurants.html">Foodie</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Open navigation">☰</button>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a class="active" href="restaurants.html">Restaurants</a>
+        <a href="menu.html">Food</a>
+        <a href="cart.html">Cart</a>
+        <a href="order-history.html">My Orders</a>
+        <button class="nav-button" id="logoutButton" type="button">Logout</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">Discover places to eat</p>
+        <h1>Restaurants</h1>
+        <p>Browse available restaurants and choose where you want to order from.</p>
+      </div>
+    </section>
+
+    <section class="section container">
+      <div class="toolbar">
+        <div class="search-box">
+          <label class="sr-only" for="restaurantSearch">Search restaurants</label>
+          <input id="restaurantSearch" type="search" placeholder="Search by restaurant name or city...">
+        </div>
+        <p class="result-count" id="restaurantCount"></p>
+      </div>
+
+      <div class="message hidden" id="restaurantMessage" role="alert"></div>
+
+      <div class="loading-state" id="restaurantLoading">
+        <div class="spinner" aria-hidden="true"></div>
+        <p>Loading restaurants...</p>
+      </div>
+
+      <div class="empty-state hidden" id="restaurantEmpty">
+        <h2>No restaurants found</h2>
+        <p>Try a different restaurant name or city.</p>
+      </div>
+
+      <div class="card-grid" id="restaurantContainer"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">Foodie — Online Food Ordering</div>
+  </footer>
+
+  <script src="js/api.js"></script>
+  <script src="js/restaurants.js"></script>
+</body>
+</html>

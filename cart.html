@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Foodie | Your Cart</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <nav class="navbar container">
+    <a class="brand" href="restaurants.html">Foodie</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Open navigation">☰</button>
+    <div class="nav-links" id="navLinks">
+      <a href="restaurants.html">Restaurants</a>
+      <a href="menu.html">Food</a>
+      <a class="active" href="cart.html">Cart <span class="cart-badge hidden" id="cartBadge">0</span></a>
+      <a href="order-history.html">My Orders</a>
+      <button class="nav-button" id="logoutButton" type="button">Logout</button>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Almost there</p>
+      <h1>Your Cart</h1>
+      <p>Review your food, adjust quantities, and continue to checkout.</p>
+    </div>
+  </section>
+
+  <section class="section container">
+    <div class="message hidden" id="cartMessage" role="alert"></div>
+
+    <div class="empty-state hidden" id="cartEmpty">
+      <h2>Your cart is empty</h2>
+      <p>Add something delicious before checking out.</p>
+      <a class="btn" href="menu.html">Browse Food</a>
+    </div>
+
+    <div class="cart-layout hidden" id="cartLayout">
+      <div class="cart-items" id="cartItems"></div>
+      <aside class="cart-summary">
+        <p class="eyebrow">Order summary</p>
+        <div class="summary-row"><span>Items</span><strong id="summaryItems">0</strong></div>
+        <div class="summary-row summary-total"><span>Subtotal</span><strong id="summaryTotal">₹0.00</strong></div>
+        <button class="btn btn-block" id="checkoutButton" type="button">Proceed to Checkout</button>
+        <a class="btn btn-secondary btn-block" href="menu.html">Continue Shopping</a>
+        <button class="danger-link" id="clearCartButton" type="button">Clear Cart</button>
+      </aside>
+    </div>
+  </section>
+</main>
+
+<div class="toast hidden" id="cartToast" role="status"></div>
+<footer class="footer"><div class="container">Foodie — Online Food Ordering</div></footer>
+<script src="js/api.js"></script>
+<script src="js/cart.js"></script>
+</body>
+</html>

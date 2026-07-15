@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Foodie | Restaurant Details</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar container">
+      <a class="brand" href="restaurants.html">Foodie</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Open navigation">☰</button>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a class="active" href="restaurants.html">Restaurants</a>
+        <a href="menu.html">Food</a>
+        <a href="cart.html">Cart</a>
+        <a href="order-history.html">My Orders</a>
+        <button class="nav-button" id="logoutButton" type="button">Logout</button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="details-main">
+    <section class="section container">
+      <a class="back-link" href="restaurants.html">← Back to Restaurants</a>
+
+      <div class="message hidden" id="restaurantDetailsMessage" role="alert"></div>
+
+      <div class="loading-state" id="restaurantDetailsLoading">
+        <div class="spinner" aria-hidden="true"></div>
+        <p>Loading restaurant...</p>
+      </div>
+
+      <article class="restaurant-details hidden" id="restaurantDetails">
+        <div class="restaurant-details-top">
+          <div>
+            <p class="eyebrow">Restaurant</p>
+            <h1 id="restaurantName"></h1>
+            <p class="details-subtitle">Choose this restaurant and continue to browse food.</p>
+          </div>
+          <div class="details-icon" aria-hidden="true">🍽️</div>
+        </div>
+
+        <div class="details-grid">
+          <section class="info-panel">
+            <h2>Restaurant Information</h2>
+            <dl class="details-list">
+              <div>
+                <dt>Manager</dt>
+                <dd id="managerName"></dd>
+              </div>
+              <div>
+                <dt>Contact</dt>
+                <dd id="contactNumber"></dd>
+              </div>
+            </dl>
+          </section>
+
+          <section class="info-panel">
+            <h2>Address</h2>
+            <address id="restaurantAddress"></address>
+          </section>
+        </div>
+
+        <div class="details-actions">
+          <a class="btn btn-outline" href="restaurants.html">Back to Restaurants</a>
+          <button class="btn" id="browseFoodButton" type="button">Browse Food Items</button>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">Foodie — Online Food Ordering</div>
+  </footer>
+
+  <script src="js/api.js"></script>
+  <script src="js/restaurants.js"></script>
+</body>
+</html>

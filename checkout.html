@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Foodie | Checkout</title><link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header"><nav class="navbar container">
+<a class="brand" href="restaurants.html">Foodie</a>
+<div class="nav-links"><a href="restaurants.html">Restaurants</a><a href="menu.html">Food</a><a href="cart.html">Cart</a><a href="order-history.html">My Orders</a><button class="nav-button" id="logoutButton">Logout</button></div>
+</nav></header>
+<main>
+<section class="page-hero"><div class="container"><p class="eyebrow">Final review</p><h1>Checkout</h1><p>Review your order before placing it.</p></div></section>
+<section class="section container">
+<div class="message hidden" id="checkoutMessage"></div>
+<div class="checkout-layout hidden" id="checkoutLayout">
+<section class="checkout-card"><h2>Your food</h2><div id="checkoutItems"></div></section>
+<aside class="cart-summary">
+<p class="eyebrow">Payment summary</p>
+<div class="summary-row"><span>Total items</span><strong id="checkoutCount">0</strong></div>
+<div class="summary-row summary-total"><span>Total</span><strong id="checkoutTotal">₹0.00</strong></div>
+<p class="checkout-note">Payment method: Cash on delivery</p>
+<button class="btn btn-block" id="placeOrderButton">Place Order</button>
+<a class="btn btn-secondary btn-block" href="cart.html">Back to Cart</a>
+</aside></div>
+</section></main>
+<footer class="footer"><div class="container">Foodie — Online Food Ordering</div></footer>
+<script src="js/api.js"></script><script src="js/checkout.js"></script>
+</body></html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Foodie | Home</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar container">
+      <a class="brand" href="index.html">Foodie</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Open navigation">☰</button>
+      <div class="nav-links" id="navLinks">
+        <a class="active" href="index.html">Home</a>
+        <a href="login.html">Login</a>
+        <a class="btn btn-small" href="register.html">Register</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-content">
+        <p class="eyebrow">Fresh food, simple ordering</p>
+        <h1>Order Your Favourite Food</h1>
+        <p>Discover restaurants and order delicious food online.</p>
+        <div class="hero-actions">
+          <a class="btn" href="login.html">Browse Food</a>
+          <a class="btn btn-outline" href="login.html">Login</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Explore</p>
+          <h2>Popular Restaurants</h2>
+        </div>
+      </div>
+
+      <div class="card-grid" id="restaurantContainer">
+        <article class="restaurant-card">
+          <div class="card-icon">🍽️</div>
+          <h3>Spice Garden</h3>
+          <p><strong>Manager:</strong> Amit Sharma</p>
+          <p><strong>Location:</strong> Indore</p>
+          <p><strong>Contact:</strong> 9876543210</p>
+          <a class="btn btn-block" href="login.html">View Restaurant</a>
+        </article>
+
+        <article class="restaurant-card">
+          <div class="card-icon">🥘</div>
+          <h3>Food Palace</h3>
+          <p><strong>Manager:</strong> Priya Singh</p>
+          <p><strong>Location:</strong> Bhopal</p>
+          <p><strong>Contact:</strong> 9765432109</p>
+          <a class="btn btn-block" href="login.html">View Restaurant</a>
+        </article>
+
+        <article class="restaurant-card">
+          <div class="card-icon">🍕</div>
+          <h3>Urban Bites</h3>
+          <p><strong>Manager:</strong> Rohan Verma</p>
+          <p><strong>Location:</strong> Pune</p>
+          <p><strong>Contact:</strong> 9654321098</p>
+          <a class="btn btn-block" href="login.html">View Restaurant</a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">Foodie — Online Food Ordering</div>
+  </footer>
+  <script src="js/auth.js"></script>
+</body>
+</html>
